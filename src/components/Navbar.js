@@ -49,7 +49,7 @@ const Navbar = () => {
                 <button className="navbar-toggler shadow-none border-0" type="button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div ref={menuRef} className={`sidebar offcanvas offcanvas-start ${isMobileMenuOpen ? 'show' : ''}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ visibility: isMobileMenuOpen ? 'visible' : 'hidden', backgroundColor: 'rgba(36, 36, 36, 0.6)',backdropFilter: 'blur(10px)'}}>
+                <div ref={menuRef} className={`sidebar offcanvas offcanvas-start ${isMobileMenuOpen ? 'show' : ''}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ visibility: isMobileMenuOpen ? 'visible' : 'hidden', backgroundColor: 'rgba(44 , 48, 56, 0.6)',backdropFilter: 'blur(10px)'}}>
                     <div className="d-lg-none">
                         <div className="d-flex justify-content-between align-items-center p-2 px-3 text-white">
                             <span className="navbar-brand fs-4 text-white"> <CodeIcon style={{ fontSize: 26, marginTop: '-0.3rem' }} />Portfolio</span>
