@@ -41,7 +41,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container">
                 <a className="navbar-brand fs-4 d-flex align-items-center" href="#">
                     <div><CodeIcon style={{ fontSize: 30, marginTop: "-0.2rem"}} />Portfolio</div>

@@ -5,3 +5,7 @@
 .nav-link {
     color: gray;
 }
+
+.navbar-dark{
+    background-color: #33383e;
+}
