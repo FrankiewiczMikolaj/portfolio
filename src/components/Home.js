@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Avatar, Grid } from '@mui/material';
-import GitHubIcon from '../images/github-mark-white.svg';
-import BuyMeACoffeeIcon from '../images/buy-me-a-coffee.svg';
-import LinkedInIcon from '../images/linkedin.svg';
+import GitHubIcon from '../icons/github-mark-white.svg';
+import BuyMeACoffeeIcon from '../icons/buy-me-a-coffee.svg';
+import LinkedInIcon from '../icons/linkedin.svg';
 import image from '../images/1614614814389.jpg';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import Typewriter from 'typewriter-effect';
