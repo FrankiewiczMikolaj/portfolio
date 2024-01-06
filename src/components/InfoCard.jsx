@@ -90,7 +90,7 @@ const Body = styled.div`
 `
 
 
-const Role = styled.div`
+const Title = styled.div`
     font-size: 18px;
     font-weight: 600;
     @media only screen and (max-width: 768px){
@@ -98,7 +98,7 @@ const Role = styled.div`
     }
 `
 
-const Company = styled.div`
+const Subtitle = styled.div`
     font-size: 14px;
     font-weight: 500;
     @media only screen and (max-width: 768px){
@@ -114,29 +114,29 @@ const Date = styled.div`
     }
 `
 
-const ExperienceCard = ({ experience }) => {
+const InfoCard = ({ info }) => {
     return (
         <Card>
             <Top>
-                <Image src={experience.img} />
+                <Image src={info.img} />
                 <Body>
-                    <Role>{experience.role}</Role>
-                    <Company>{experience.company}</Company>
-                    <Date>{experience.date}</Date>
+                    <Title>{info.title}</Title>
+                    <Subtitle>{info.subtitle}</Subtitle>
+                    <Date>{info.date}</Date>
                 </Body>
             </Top>
             <Description>
-                {experience?.desc &&
-                    <Span>{experience?.desc}</Span>
+                {info?.desc &&
+                    <Span>{info?.desc}</Span>
                 }
             </Description>
-            {experience.doc &&
-                <a href={experience.doc} target="new">
-                    <Document src={experience.doc} />
+            {info.doc &&
+                <a href={info.doc} target="new">
+                    <Document src={info.doc} />
                 </a>
             }
         </Card>
     )
 }
 
-export default ExperienceCard
+export default InfoCard

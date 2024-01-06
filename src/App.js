@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import SingleProject from "./components/Projects/SingleProject";
+import Education from "./components/Education/Education";
 function App() {
     const [openModal, setOpenModal] = useState({ state: false, project: null });
     console.log(openModal)
@@ -18,10 +19,11 @@ function App() {
         <About />
         <Skills />
         <Experience />
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          {openModal.state &&
-              <SingleProject openModal={openModal} setOpenModal={setOpenModal} />
-          }
+        <Projects openModal={openModal} setOpenModal={setOpenModal} />
+        {openModal.state &&
+            <SingleProject openModal={openModal} setOpenModal={setOpenModal} />
+        }
+        <Education/>
       </Router>
   );
 }
