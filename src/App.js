@@ -9,6 +9,7 @@ import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import SingleProject from "./components/Projects/SingleProject";
 import Education from "./components/Education/Education";
+import Contact from "./components/Contact";
 function App() {
     const [openModal, setOpenModal] = useState({ state: false, project: null });
     console.log(openModal)
@@ -24,6 +25,7 @@ function App() {
             <SingleProject openModal={openModal} setOpenModal={setOpenModal} />
         }
         <Education/>
+        <Contact />
       </Router>
   );
 }

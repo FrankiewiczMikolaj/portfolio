@@ -38,7 +38,7 @@ const Navbar = () => {
             window.removeEventListener('mousedown', handleClickOutside);
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [handleClickOutside, handleResize]);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark">
