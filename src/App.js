@@ -10,6 +10,7 @@ import Projects from "./components/Projects/Projects";
 import SingleProject from "./components/Projects/SingleProject";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
     const [openModal, setOpenModal] = useState({ state: false, project: null });
     console.log(openModal)
@@ -26,6 +27,7 @@ function App() {
         }
         <Education/>
         <Contact />
+        <Footer/>
       </Router>
   );
 }
