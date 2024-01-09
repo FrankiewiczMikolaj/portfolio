@@ -19,7 +19,7 @@ const AboutText = styled.p`
 `;
 
 const About = () => (
-    <AboutContainer>
+    <AboutContainer id="about">
         <h1>About Me</h1>
         <AboutText> I'm a software developer with a passion for creating useful and innovative technology. Currently, I'm working as a Zoho Systems Specialist, where I implement and customize applications for my customers. I also study programming and databases, and I'm in the final stages of earning my degree. My aim is to use my expertise in technology to solve problems, make everyday tasks easier, and bring positive changes through my work.</AboutText>
     </AboutContainer>

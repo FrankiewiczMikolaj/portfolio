@@ -97,7 +97,7 @@ export const Contact = () => {
     };
 
     return (
-        <ContactSection>
+        <ContactSection id="contact">
             <h1>Contact Me</h1>
             <ContactForm ref={form} onSubmit={sendEmail}>
                 <FormInput type="text" name="from_name" placeholder="Your Name" required />

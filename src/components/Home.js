@@ -121,7 +121,7 @@ const SocialIcon = styled.a`
 const Home = () => {
     return (
         <>
-            <SectionContainer>
+            <SectionContainer id="home">
                 <Avatar
                     src={image}
                     alt="Mikołaj Frankiewicz"

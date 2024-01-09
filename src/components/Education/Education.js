@@ -28,15 +28,6 @@ const EducationContainer = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  @media (max-width: 960px) {
-    padding: 0;
-    margin: 0;
-  }
-  @media (max-width: 280px) {
-    width: 100%;
-    overflow-x: hidden;
-  }
 `;
 
 
@@ -50,6 +41,7 @@ const Wrapper = styled.div`
   max-width: 1350px;
   margin-top: 2.5rem;
   gap: 12px;
+  overflow: hidden;
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -85,7 +77,7 @@ const schools = [
 ];
 const Education = () => (
     <ThemeProvider theme={theme}>
-        <EducationContainer>
+        <EducationContainer id="education">
             <Wrapper>
                 <h1>Education</h1>
                 <TimelineSection>

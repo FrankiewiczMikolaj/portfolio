@@ -29,15 +29,6 @@ const ExperienceContainer = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  @media (max-width: 960px) {
-    padding: 0;
-    margin: 0;
-  }
-  @media (max-width: 280px) {
-    width: 100%;
-    overflow-x: hidden;
-  }
 `;
 
 
@@ -50,6 +41,7 @@ const Wrapper = styled.div`
     width: 100%;
     max-width: 1350px;
     margin-top: 2.5rem;
+    overflow: hidden;
     gap: 12px;
     @media (max-width: 960px) {
         flex-direction: column;
@@ -87,7 +79,7 @@ const experiences = [
 ];
 const Experience = () => (
     <ThemeProvider theme={theme}>
-    <ExperienceContainer>
+    <ExperienceContainer id="experience">
         <Wrapper>
             <h1>Experience</h1>
             <TimelineSection>
