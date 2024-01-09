@@ -68,6 +68,7 @@ const TimelineSection = styled.div`
 
 const experiences = [
     {
+        id: 0,
         img: "https://firebasestorage.googleapis.com/v0/b/portfolio-580cb.appspot.com/o/zpartner.png?alt=media&token=93da0aa1-36b5-4f27-86fe-bdc8193110ea",
         title: "Zoho Systems Specialist",
         subtitle: "ZPartner",
@@ -76,6 +77,7 @@ const experiences = [
         doc: "https://firebasestorage.googleapis.com/v0/b/portfolio-580cb.appspot.com/o/Zoho%20Certificate.png?alt=media&token=01ea8b4d-b31f-4f71-b0a7-bf869677a075",
     },
     {
+        id: 1,
         img: "https://firebasestorage.googleapis.com/v0/b/portfolio-580cb.appspot.com/o/software%26service.jpg?alt=media&token=832673f9-b355-4147-a58e-8d365b59a96f",
         title: "Apprentice",
         subtitle: "Software & Service",
@@ -90,8 +92,8 @@ const Experience = () => (
             <h1>Experience</h1>
             <TimelineSection>
                 <Timeline>
-                    {experiences.map((experience,index) => (
-                        <TimelineItem>
+                    {experiences.map((experience, index) => (
+                        <TimelineItem key={experience.id}>
                             <TimelineSeparator>
                                 <TimelineDot variant="outlined" color="success" />
                                 {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#6b7783' }} />}

@@ -67,6 +67,7 @@ const TimelineSection = styled.div`
 
 const schools = [
     {
+        id: 0,
         img: "https://firebasestorage.googleapis.com/v0/b/portfolio-580cb.appspot.com/o/wlodkowic.jpg?alt=media&token=62581886-2fb0-4609-8042-eda6e9c706b0",
         title: "Pawel Wlodkowic University College in Plock",
         subtitle: "Programming & Databases",
@@ -74,6 +75,7 @@ const schools = [
         desc: "Aliquam vehicula non metus vitae vestibulum. Vestibulum eget tortor vestibulum, accumsan nisl eget, blandit eros. Donec interdum mauris et tellus rutrum, at posuere urna pharetra. Morbi eu sollicitudin nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In magna dolor, dictum eu ipsum at, elementum dignissim sapien. Cras porttitor purus sit amet ipsum lacinia, sit amet gravida libero pharetra. Nulla tempor accumsan nunc. Maecenas in pretium arcu. Donec vestibulum quam sapien.",
     },
     {
+        id: 1,
         img: "https://firebasestorage.googleapis.com/v0/b/portfolio-580cb.appspot.com/o/zsn2.jpeg?alt=media&token=f3bdf40d-e5d7-41ae-8275-f9b255152b8f",
         title: "Leon Rutkowski Complex of Schools No. 2 in Płońsk",
         subtitle: "IT technician",
@@ -88,11 +90,12 @@ const Education = () => (
                 <h1>Education</h1>
                 <TimelineSection>
                     <Timeline>
-                        {schools.map((school,index) => (
-                            <TimelineItem>
+                        {schools.map((school, index) => (
+                            <TimelineItem key={school.id}>
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="success" />
-                                    {index !== schools.length - 1 && <TimelineConnector style={{ background: '#6b7783' }} />}
+                                    {
+                                        index !== schools.length - 1 && <TimelineConnector style={{ background: '#6b7783' }} />}
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                                     <InfoCard info={school}/>
@@ -100,7 +103,6 @@ const Education = () => (
                             </TimelineItem>
                         ))}
                     </Timeline>
-
                 </TimelineSection>
             </Wrapper>
         </EducationContainer>
