@@ -41,15 +41,15 @@ const Navbar = () => {
     }, [handleClickOutside, handleResize]);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
             <div className="container">
-                <a className="navbar-brand fs-4 d-flex align-items-center" href="#">
+                <a className="navbar-brand fs-4 d-flex align-items-center" href="src/components#">
                     <div><CodeIcon style={{ fontSize: 30, marginTop: "-0.2rem"}} />Portfolio</div>
                 </a>
                 <button className="navbar-toggler shadow-none border-0" type="button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div ref={menuRef} className={`sidebar offcanvas offcanvas-start ${isMobileMenuOpen ? 'show' : ''}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ visibility: isMobileMenuOpen ? 'visible' : 'hidden', backgroundColor: 'rgba(44 , 48, 56, 0.6)',backdropFilter: 'blur(10px)'}}>
+                <div ref={menuRef} className={`sidebar offcanvas offcanvas-start ${isMobileMenuOpen ? 'show' : ''}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ visibility: isMobileMenuOpen ? 'visible' : 'hidden', backgroundColor: 'rgba(40 , 44, 49, 0.7)',backdropFilter: 'blur(10px)'}}>
                     <div className="d-lg-none">
                         <div className="d-flex justify-content-between align-items-center p-2 px-3 text-white">
                             <span className="navbar-brand fs-4 text-white"> <CodeIcon style={{ fontSize: 26, marginTop: '-0.3rem' }} />Portfolio</span>

@@ -9,7 +9,7 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import Typewriter from 'typewriter-effect';
 
 const SectionContainer = styled.section`
-  padding-top: 5vh;
+  padding-top: 10vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
