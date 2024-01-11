@@ -4,12 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CodeIcon from '@mui/icons-material/Code';
 
 const Navbar = () => {
-    const [activeSection, setActiveSection] = useState('home');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const menuRef = useRef();
 
-    const handleMenuItemClick = (section) => {
-        setActiveSection(section);
+    const handleMenuItemClick = () => {
         if (isMobileMenuOpen) {
             setIsMobileMenuOpen(false);
         }
@@ -38,12 +36,12 @@ const Navbar = () => {
             window.removeEventListener('mousedown', handleClickOutside);
             window.removeEventListener('resize', handleResize);
         };
-    }, [handleClickOutside, handleResize]);
+    }, []);
 
     return (
         <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
             <div className="container">
-                <a className="navbar-brand fs-4 d-flex align-items-center" href="src/components#">
+                <a className="navbar-brand fs-4 d-flex align-items-center" href="#home">
                     <div><CodeIcon style={{ fontSize: 30, marginTop: "-0.2rem"}} />Portfolio</div>
                 </a>
                 <button className="navbar-toggler shadow-none border-0" type="button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -60,7 +58,7 @@ const Navbar = () => {
                         <ul className="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                             {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact'].map((item, index) => (
                                 <li key={index} className="nav-item mx-2">
-                                    <a className={`nav-link ${activeSection === item.toLowerCase() ? 'active-link' : ''}`} href={`#${item.toLowerCase()}`} onClick={() => handleMenuItemClick(item.toLowerCase())}>{item}</a>
+                                    <a className={`nav-link`} href={`#${item.toLowerCase()}`} onClick={() => handleMenuItemClick(item.toLowerCase())}>{item}</a>
                                 </li>
                             ))}
                         </ul>
