@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CodeIcon from '@mui/icons-material/Code';
@@ -13,20 +13,20 @@ const Navbar = () => {
         }
     };
 
-    const closeMobileMenu = () => {
+    const closeMobileMenu = useCallback(() => {
         setIsMobileMenuOpen(false);
-    };
+    }, []);
 
-    const handleClickOutside = (event) => {
+    const handleClickOutside = useCallback((event) => {
         if (menuRef.current && !menuRef.current.contains(event.target)) {
             closeMobileMenu();
         }
-    };
-    const handleResize = () => {
+    }, [closeMobileMenu]);
+    const handleResize = useCallback(() => {
         if (window.innerWidth > 992) {
             closeMobileMenu();
         }
-    };
+    }, [closeMobileMenu]);
 
     useEffect(() => {
         window.addEventListener('mousedown', handleClickOutside);
@@ -36,7 +36,7 @@ const Navbar = () => {
             window.removeEventListener('mousedown', handleClickOutside);
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [handleClickOutside, handleResize]);
 
     return (
         <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
