@@ -146,13 +146,13 @@ const Home = () => {
                         <IconButton text="Download Resume" />
                     </Grid>
                     <SocialsContainer>
-                        <SocialIcon href="https://linkedin.com/" target="_blank">
-                            <img src={LinkedInIcon} alt="Buy Me a Coffee" width="33" />
+                        <SocialIcon href="https://www.linkedin.com/in/miko%C5%82aj-frankiewicz-9b93a7202/" target="_blank">
+                            <img src={LinkedInIcon} alt="Linkedin" width="33" />
                         </SocialIcon>
-                        <SocialIcon href="https://github.com/" target="_blank">
-                            <img src={GitHubIcon} alt="Buy Me a Coffee" width="33" />
+                        <SocialIcon href="https://github.com/FrankiewiczMikolaj" target="_blank">
+                            <img src={GitHubIcon} alt="Github" width="33" />
                         </SocialIcon>
-                        <SocialIcon href="https://buymeacoffee.com/" target="_blank">
+                        <SocialIcon href="https://www.buymeacoffee.com/frankiewicz" target="_blank">
                             <img src={BuyMeACoffeeIcon} alt="Buy Me a Coffee" width="23" />
                         </SocialIcon>
                     </SocialsContainer>
