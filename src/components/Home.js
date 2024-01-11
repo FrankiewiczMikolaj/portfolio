@@ -98,8 +98,8 @@ const ButtonIcon = styled.span`
   background: rgba(0, 0, 0, 0.08);
   height: 100%;
 `;
-const IconButton = ({ text }) => (
-    <StyledButton>
+const IconButton = ({ text, onClick }) => (
+    <StyledButton onClick={onClick}>
         <ButtonText>{text}</ButtonText>
         <ButtonIcon>
             <CloudDownloadIcon style={{ color: 'white', fontSize: '1.9em' }} />
@@ -119,6 +119,9 @@ const SocialIcon = styled.a`
 `;
 
 const Home = () => {
+    const handleResumeClick = () => {
+        window.open('https://firebasestorage.googleapis.com/v0/b/portfolio-580cb.appspot.com/o/cv.pdf?alt=media&token=7f125b81-11b5-4088-8947-7023ba7a8ad8', '_blank');
+    };
     return (
         <>
             <SectionContainer id="home">
@@ -143,7 +146,7 @@ const Home = () => {
             </span>
                     </h4>
                     <Grid container justifyContent="center">
-                        <IconButton text="Download Resume" />
+                        <IconButton text="Download Resume" onClick={handleResumeClick} />
                     </Grid>
                     <SocialsContainer>
                         <SocialIcon href="https://www.linkedin.com/in/miko%C5%82aj-frankiewicz-9b93a7202/" target="_blank">
