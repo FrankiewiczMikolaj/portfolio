@@ -25,7 +25,7 @@ const Popup = styled.div`
   max-width: 800px;
   background-color: #495159;
   padding: 15px;
-  z-index: 1000;
+  z-index: 1200;
   display: flex;
   flex-direction: column;
   align-items: center;
