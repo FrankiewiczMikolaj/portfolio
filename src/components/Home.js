@@ -4,9 +4,9 @@ import { Avatar, Grid } from '@mui/material';
 import GitHubIcon from '../icons/github-mark-white.svg';
 import BuyMeACoffeeIcon from '../icons/buy-me-a-coffee.svg';
 import LinkedInIcon from '../icons/linkedin.svg';
-import image from '../images/1614614814389.jpg';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import Typewriter from 'typewriter-effect';
+import { home } from '../configuration/constants';
 
 const SectionContainer = styled.section`
   padding-top: 10vh;
@@ -120,25 +120,25 @@ const SocialIcon = styled.a`
 
 const Home = () => {
     const handleResumeClick = () => {
-        window.open('https://firebasestorage.googleapis.com/v0/b/portfolio-580cb.appspot.com/o/cv.pdf?alt=media&token=7f125b81-11b5-4088-8947-7023ba7a8ad8', '_blank');
+        window.open(home.resume, '_blank');
     };
     return (
         <>
             <SectionContainer id="home">
                 <Avatar
-                    src={image}
-                    alt="Mikołaj Frankiewicz"
+                    src={home.avatar_image}
+                    alt={home.avatar_alt}
                     sx={{ width: 300, height: 300 }}
                 />
                 <ProfileContainer>
                     <h4 className="hello-text">Hello, my name is</h4>
-                    <h1 className={"name"}>Mikołaj Frankiewicz</h1>
+                    <h1 className={"name"}>{home.name}</h1>
                     <h4 className="job-title">
                         I'm a{' '}
                         <span>
               <Typewriter
                   options={{
-                      strings: ['Software Developer', 'Data Engineer'],
+                      strings: home.roles,
                       autoStart: true,
                       loop: true,
                   }}
@@ -149,13 +149,13 @@ const Home = () => {
                         <IconButton text="Download Resume" onClick={handleResumeClick} />
                     </Grid>
                     <SocialsContainer>
-                        <SocialIcon href="https://www.linkedin.com/in/miko%C5%82aj-frankiewicz-9b93a7202/" target="_blank">
+                        <SocialIcon href={home.linkedin_url} target="_blank">
                             <img src={LinkedInIcon} alt="Linkedin" width="33" />
                         </SocialIcon>
-                        <SocialIcon href="https://github.com/FrankiewiczMikolaj" target="_blank">
+                        <SocialIcon href={home.github_url} target="_blank">
                             <img src={GitHubIcon} alt="Github" width="33" />
                         </SocialIcon>
-                        <SocialIcon href="https://www.buymeacoffee.com/frankiewicz" target="_blank">
+                        <SocialIcon href={home.buy_me_a_coffee_url} target="_blank">
                             <img src={BuyMeACoffeeIcon} alt="Buy Me a Coffee" width="23" />
                         </SocialIcon>
                     </SocialsContainer>
